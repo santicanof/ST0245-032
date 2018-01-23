@@ -39,10 +39,6 @@ public class Punto2D {
     public float angulo() {
         return (float)  Math.atan2(x,y);    
     }
-    
-    
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
+
     
 }
