@@ -61,7 +61,7 @@ public class Taller5 {
     public static void main(String[] args) {
         // TODO code application logic here
         /*
-        ARRAYSUM
+        TABLAS
         for (int i = 10000; i <= 50000; i=i+1000) {
             long ahora=System.currentTimeMillis();
             tablas(i);
