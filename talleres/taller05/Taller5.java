@@ -7,7 +7,7 @@ package taller5;
 public class Taller5 {
 
     
-    
+    //Tablas O(n^2)
     public static int tablas(int n){
         int h=0;
         for (int i = 1; i <= n; i++) {
@@ -20,7 +20,7 @@ public class Taller5 {
         return h;
     }
     
-    
+    //Ordenar O(n^2)
     public static void ordenar(int []arr){
         int j=0;
         for (int i = 0; i < arr.length; i++) {
@@ -34,7 +34,7 @@ public class Taller5 {
         }
     }
     
-    
+    //ArraySum  O(n)
     public static int arraySum(int[] A) {
         int suma = 0;
         for(int i = 0 ; i < A.length ; i++){
@@ -70,15 +70,15 @@ public class Taller5 {
             System.out.println(i+ " " + meDemore);
         }
         */
-        for(int i = 10000; i <= 50000 ; i+= 1000){
+        //ARRAY SUM 
+        for(int i = 1000000; i <= 40000000 ; i+= 1000000){
             int[] m = rand(i);
             long ahora=System.currentTimeMillis();
-            int suma=arraySum(m);
+            arraySum(m);
             long despues= System.currentTimeMillis();
             long meDemore= despues-ahora;
             System.out.println(i+ " " + meDemore );
         }
-        
         
         
         /*
