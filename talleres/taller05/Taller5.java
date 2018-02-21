@@ -53,15 +53,13 @@ public class Taller5 {
     }
     
     
-    
-    
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        /*
-        TABLAS
+        System.out.println("TABLAS DE MULTPLICAR");
+        
         for (int i = 10000; i <= 50000; i=i+1000) {
             long ahora=System.currentTimeMillis();
             tablas(i);
@@ -69,8 +67,8 @@ public class Taller5 {
             long meDemore= despues-ahora;
             System.out.println(i+ " " + meDemore);
         }
-        */
-        //ARRAY SUM 
+        
+        System.out.println("\nARRAY SUM"); 
         for(int i = 1000000; i <= 40000000 ; i+= 1000000){
             int[] m = rand(i);
             long ahora=System.currentTimeMillis();
@@ -80,9 +78,7 @@ public class Taller5 {
             System.out.println(i+ " " + meDemore );
         }
         
-        
-        /*
-        ORDENAMIENTO
+        System.out.println("\nORDENAMIENTO");
         for(int i = 10000; i <= 50000 ; i+= 1000){
             int[] m = rand(i);
             long ahora=System.currentTimeMillis();
@@ -91,9 +87,5 @@ public class Taller5 {
             long meDemore= despues-ahora;
             System.out.println(i+ " " + meDemore);
         }
-        
-        */
-        
     }
-    
 }
