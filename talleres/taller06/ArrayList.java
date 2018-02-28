@@ -2,30 +2,43 @@
 /**
  * Write a description of class ArrayList here.
  * 
- * @author (your name) 
+ * @author Agustin Rico y Santiago Cano
  * @version (a version number or a date)
  */
-public class ArrayList
-{
+import java.util.Arrays;
+public class ArrayList {
+
     private int size;
-    private int [] A;
-    private int DEFAULT_SIZE;
+    private int[] A;
+    private int DEFAULT_SIZE=10;
+
     public ArrayList() {
         this.size = 0;
         this.A = new int[DEFAULT_SIZE];
     }
+
     public int size() {
         return size;
     }
+
     public int get(int n) {
-        return A[n];
+        if(n>=size()){
+            System.out.println("El array no tiene esa posición.");
+            return -1;
+        }else{
+            return A[n];
+        }
     }
+
     public void add(int n) {
-        /**
-        *Hay que poner el elemento n en la primera posición, la solución consiste en mover todos los elementos a la derecha.
-        *Hay dos casos, cuando el arreglo tiene espacios vacíos, y cuando está lleno. Cuando tiene espacios vacíos simplemente se mueve todo a la derecha y 
-        *en la posición 0 se pone n.
-        *Cuando está lleno, hay que crear uno nuevo con el doble de length del primero y hacerle lo del caso cuando no está lleno.
-        */
+        if (size() >= A.length) {
+            this.A = Arrays.copyOf(this.A, this.A.length*2);
+        } 
+        for (int i = size() - 1; i >= 1; i--) {
+            A[i] = A[i - 1];
+        }
+        A[0] = n;
+        this.size++;
     }
+
 }
